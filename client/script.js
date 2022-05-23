@@ -9,6 +9,11 @@ const studentCardWrapper = document.querySelector('.student-card-wrapper');
 
 const studentList = document.querySelector('.modal_add-user');
 
+
+viewAddStudentButton.addEventListener('click', viewModalAddStudent);
+delStudentButton.addEventListener('click', delStudent);
+getStudentsButton.addEventListener('click', getStudentList);
+
 function viewModalAddStudent () {
     main.style.opacity = '0.3';
     studentList.style.display = 'flex';
