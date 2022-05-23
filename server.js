@@ -53,3 +53,6 @@ app.get('/api/students', (req, res) => {
         }
     })
 })
+
+app.use(express.static('client'));
+app.listen(port, () => console.log(`Приложение запущенно на порте ${port}`))
