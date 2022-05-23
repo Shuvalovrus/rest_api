@@ -1,0 +1,31 @@
+/* COMMON STYLE */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-family: "Segoe Print", sans-serif;
+}
+.button {
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #346ed2;
+}
+.button:hover {
+    background-color: #4d7ed5;
+}
+.title {
+    margin-bottom: 20px;
+}
+/* /COMMON STYLE */
