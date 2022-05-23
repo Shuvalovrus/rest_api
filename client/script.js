@@ -13,3 +13,9 @@ function viewModalAddStudent () {
     main.style.opacity = '0.3';
     studentList.style.display = 'flex';
 }
+
+function delStudent () {
+    const deleteModal = document.querySelector('.modal_del-student');
+    main.style.opacity = '0.3';
+    deleteModal.style.display = 'flex';
+}
