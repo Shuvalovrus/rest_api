@@ -58,3 +58,10 @@ body {
     border-bottom: 1px solid black;
 }
 /* /FORM */
+
+/* CARD */
+.student-card {
+    display: flex;
+    justify-content: space-between;
+}
+/* /CARD */
