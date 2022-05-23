@@ -42,3 +42,14 @@ app.post('/api/delStudent' , (req, res) => {
         }
     })
 })
+
+/* GET */
+app.get('/api/students', (req, res) => {
+    connection.query('SELECT * FROM users', (err, result) => {
+        if (err) {
+            throw err;
+        } else {
+            res.send(result);
+        }
+    })
+})
