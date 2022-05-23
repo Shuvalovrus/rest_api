@@ -14,6 +14,11 @@ viewAddStudentButton.addEventListener('click', viewModalAddStudent);
 delStudentButton.addEventListener('click', delStudent);
 getStudentsButton.addEventListener('click', getStudentList);
 
+closeButton.addEventListener('click', () => {
+    main.style.opacity = '1';
+    studentList.style.display = 'none';
+})
+
 function viewModalAddStudent () {
     main.style.opacity = '0.3';
     studentList.style.display = 'flex';
