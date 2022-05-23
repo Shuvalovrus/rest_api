@@ -8,3 +8,8 @@ const main = document.querySelector('.main');
 const studentCardWrapper = document.querySelector('.student-card-wrapper');
 
 const studentList = document.querySelector('.modal_add-user');
+
+function viewModalAddStudent () {
+    main.style.opacity = '0.3';
+    studentList.style.display = 'flex';
+}
