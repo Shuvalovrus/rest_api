@@ -30,3 +30,15 @@ app.post('/api/addStudent' , (req, res) => {
         }
     })
 })
+
+app.post('/api/delStudent' , (req, res) => {
+    connection.query(`DELETE FROM users WHERE ID=${req.body.id}`,
+    (err, result) => {
+        if (err) {
+            throw err;
+            res.redirect('/')
+        } else {
+            res.redirect('/')
+        }
+    })
+})
