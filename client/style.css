@@ -29,3 +29,10 @@ body {
     margin-bottom: 20px;
 }
 /* /COMMON STYLE */
+
+/* CONTROL BUTTONS */
+.control-buttons {
+    display: flex;
+    gap: 30px;
+}
+/* /CONTROL BUTTONS */
