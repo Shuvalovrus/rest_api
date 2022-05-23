@@ -17,3 +17,16 @@ const connection = mySql.createConnection({
 })
 
 connection.connect()
+
+/* POST */
+app.post('/api/addStudent' , (req, res) => {
+    connection.query('INSERT INTO users (name, lastname, middlename, birthday, class) VALUES (?,?,?,?,?)' ,[req.body.name, req.body.lastname, req.body.middlename, req.body.date, req.body.class],
+    (err, result) => {
+        if (err) {
+            throw err;
+            res.redirect('/')
+        } else {
+            res.redirect('/')
+        }
+    })
+})
