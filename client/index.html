@@ -20,23 +20,23 @@
         <form action="/api/addStudent" method="post" class="form container">
             <div class="form__input">
                 <label for="name">Имя</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" required>
             </div>
             <div class="form__input">
                 <label for="lastname">Фамилия</label>
-                <input type="text" id="lastname" name="lastname">
+                <input type="text" id="lastname" name="lastname" required>
             </div>
             <div class="form__input">
                 <label for="middlename">Отчество</label>
-                <input type="text" id="middlename" name="middlename">
+                <input type="text" id="middlename" name="middlename" required>
             </div>
             <div class="form__input">
                 <label for="date">Дата рождения</label>
-                <input type="date" id="date" name="date">
+                <input type="date" id="date" name="date" required>
             </div>
             <div class="form__input">
                 <label for="class">Группа</label>
-                <input type="text" id="class" name="class">
+                <input type="text" id="class" name="class" required>
             </div>
             <button type="submit" class="button button_add-student">Добавить</button>
             <button type="button" class="button button_close">Отменить</button>
@@ -46,7 +46,7 @@
         <form action="/api/delStudent" method="post" class="form container">
             <div class="form__input">
                 <label for="id">Введите id студента</label>
-                <input type="text" name="id" id="id">
+                <input type="text" name="id" id="id" required>
             </div>
             <button type="submit" class="button">Удалить из списка</button>
         </form>
