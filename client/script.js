@@ -2,7 +2,7 @@ const viewAddStudentButton = document.querySelector('.button_viewModalAdd');
 const delStudentButton = document.querySelector('.button_del-student')
 const getStudentsButton = document.querySelector('.button_get-students');
 const studentCard = document.querySelector('.student-card');
-const closeButton = document.querySelector('.button_close');
+const closeButton = document.querySelectorAll('.button_close');
 
 const main = document.querySelector('.main');
 const studentCardWrapper = document.querySelector('.student-card-wrapper');
@@ -14,9 +14,11 @@ viewAddStudentButton.addEventListener('click', viewModalAddStudent);
 delStudentButton.addEventListener('click', delStudent);
 getStudentsButton.addEventListener('click', getStudentList);
 
-closeButton.addEventListener('click', () => {
-    main.style.opacity = '1';
-    studentList.style.display = 'none';
+closeButton.forEach((elem) => {
+    elem.addEventListener('click',(e) => {
+        main.style.opacity = '1';
+        e.target.parentElement.parentElement.style.display = 'none'
+    })
 })
 
 function viewModalAddStudent () {
