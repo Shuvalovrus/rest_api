@@ -32,13 +32,29 @@ function delStudent () {
     deleteModal.style.display = 'flex';
 }
 
+function formatDate(prop) {
+    let date = new Date(prop);
+    let dd = date.getDate();
+    if (dd < 10) dd = '0' + dd;
+
+    let mm = date.getMonth() + 1;
+    if (mm < 10) mm = '0' + mm;
+
+    let yy = date.getFullYear() % 100;
+    if (yy < 10) yy = '0' + yy;
+
+    return dd + '.' + mm + '.' + yy;
+}
+
+
 async function getStudentList () {
     const data = await request('/api/students')
+
     if (data.length === 1) {
         studentCardWrapper.innerHTML += `
             <span class="user-card__id">ID:${data.ID}</span>
             <span class="user-card__name">Ф.И.О:${data.lastname + ' ' + data.name + ' ' + data.middlename}</span>
-            <span class="user-card__birthday">Дата рождения:${data.birthday}</span>
+            <span class="user-card__birthday">Дата рождения:${formatDate(data.birthday)}</span>
             <span class="user-card__group">Группа:${data.class}</span>
                                                                         `
     } else if (data.length > 1) {
@@ -48,7 +64,7 @@ async function getStudentList () {
             <div class="student-card">
                 <span class="user-card__id">ID:${data[i].ID}</span>
                 <span class="user-card__name">Ф.И.О:${data[i].lastname + ' ' + data[i].name + ' ' + data[i].middlename}</span>
-                <span class="user-card__birthday">Дата рождения:${data[i].birthday}</span>
+                <span class="user-card__birthday">Дата рождения: ${formatDate(data[i].birthday)}</span>
                 <span class="user-card__group">Группа:${data[i].class}</span>       
             </div>`
         }
